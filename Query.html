@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::jQuery functions::</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+    <style>
+        .bg_color {
+            background-color:limegreen;
+        }
+    </style>
+
+    <script>
+    $(document).ready(function (){
+            $('#btnHide').click(function (){
+                $('.hst p').hide()
+            });
+
+            $('#btnShow').click(function (){
+                $('.hst p').show()
+            });
+
+            $('#btnToggle').click(function (){
+                $('.hst p').toggle()
+            });
+
+            $('#btnSlideUp').click(function (){
+                $('.slide p').slideUp()
+            });
+
+            $('#btnSlideDown').click(function (){
+                $('.slide p').slideDown()
+            });
+
+            $('#btnSlideToggle').click(function (){
+                $('.slide p').slideToggle()
+            });
+
+            $('#btnFadeIn').click(function (){
+                $('.fades p').fadeIn()
+            });
+
+            $('#btnFadeOut').click(function (){
+                $('.fades p').fadeOut()
+            });
+
+            $('#btnFadeToggle').click(function (){
+                $('.fades p').fadeToggle()
+            });
+
+            $('#btnAddClass').click(function (){
+                $('.clss p').addClass('bg_color')
+            });
+
+            $('#btnRemoveClass').click(function (){
+                $('.clss p').removeClass('bg_color')
+            });
+
+            $('#btnToggleClass').click(function (){
+                $('.clss p').toggleClass('bg_color')
+            });
+            $('#btnBefore').click(function (){
+                $('.addElements p').before('Before text ')
+            });
+
+            $('#btnAfter').click(function (){
+                $('.addElements p').after(' After text')
+            });
+
+            $('#btnAppend').click(function (){
+                $('.addElements p').append(' Append Text ')
+            });
+
+            $('#btnHtml').click(function (){
+                let a = "<b>"+$('.others #ot_html').text()+"</b>";
+                $('.others #ot_html').html(a);
+            });
+
+            $('#btnText').click(function (){
+                let b = $('.others #ot_text').text()+" algo"
+                $('.others #ot_text').text(b)
+            });
+
+            $('#btnAttr').click(function (){
+                $('.others p svg').attr('class',"bi bi-book-half")
+                $('.others p svg path').attr('d',"M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z")
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container align-content-center">
+        <h1 class="mb-3" style="text-align: center;">jQuery exercises</h1>
+        <div class=" mb-3 row">
+            <div class="col hst">
+                <h3 class="my-3">Hide - Show - Toggle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, earum molestiae reiciendis sed quaerat veniam sit autem, sequi impedit facere corrupti rem libero. Architecto voluptate recusandae molestias ipsa quas repellendus.</p>
+                <button id="btnHide" class="btn btn-primary">Hide</button>
+                <button id="btnShow" class="btn btn-secondary">Show</button>
+                <button id="btnToggle" class="btn btn-danger">Toggle</button>
+            </div>
+            <div class="col slide">
+                <h3 class="my-3">Slide Up - Down - Toggle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, earum molestiae reiciendis sed quaerat veniam sit autem, sequi impedit facere corrupti rem libero. Architecto voluptate recusandae molestias ipsa quas repellendus.</p>
+                <button id="btnSlideUp" class="btn btn-primary">Slide Up</button>
+                <button id="btnSlideDown" class="btn btn-secondary">Slide Down</button>
+                <button id="btnSlideToggle" class="btn btn-danger">Slide Toggle</button>
+            </div>
+            <div class="col fades">
+                <h3 class="my-3">Fade In - Out - Toggle</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, earum molestiae reiciendis sed quaerat veniam sit autem, sequi impedit facere corrupti rem libero. Architecto voluptate recusandae molestias ipsa quas repellendus.</p>
+                <button id="btnFadeIn" class="btn btn-primary">Fade In</button>
+                <button id="btnFadeOut" class="btn btn-secondary">Fade Out</button>
+                <button id="btnFadeToggle" class="btn btn-warning">Fade Toggle</button>
+            </div>
+        </div>
+
+        <div class=" mb-3 row">
+            <div class="col clss">
+                <h3 class="my-3">Add - Remove class</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, earum molestiae reiciendis sed quaerat veniam sit autem, sequi impedit facere corrupti rem libero. Architecto voluptate recusandae molestias ipsa quas repellendus.</p>
+                <button id="btnAddClass" class="btn btn-primary">Add class</button>
+                <button id="btnRemoveClass" class="btn btn-secondary">Remove class</button>
+                <button id="btnToggleClass" class="btn btn-success">Toggle class</button>
+            </div>
+            <div class="col addElements">
+                <h3 class="my-3">Before - After - Append</h3>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, earum molestiae reiciendis sed quaerat veniam sit autem, sequi impedit facere corrupti rem libero. Architecto voluptate recusandae molestias ipsa quas repellendus.</p>
+                </div>
+                <button id="btnBefore" class="btn btn-primary">Before</button>
+                <button id="btnAfter" class="btn btn-secondary">After</button>
+                <button id="btnAppend" class="btn btn-info">Append</button>
+            </div>
+            <div class="col others">
+                <h3 class="my-3">html - text - attr</h3>
+                <p id="ot_html">HTML convierte en negrita este parrafo.</p>
+                <p id="ot_text">Text agregará 'algo' a este parrafo</p>
+                <p id="ot_attr">Attr cambia el atributo del ícono, cambiando su tipo
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
+                    <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"/>
+                </svg>
+                </p>
+                
+                <button id="btnHtml" class="btn btn-primary">HTML</button>
+                <button id="btnText" class="btn btn-secondary">Text</button>
+                <button id="btnAttr" class="btn btn-warning">attr</button>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
